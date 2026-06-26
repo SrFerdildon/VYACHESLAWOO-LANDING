@@ -23,15 +23,118 @@
 <body>
 	<!-- Хедер / Навигация -->
 	<header class="header">
-		<nav class="nav">
-			<!-- Здесь будет логотип и меню -->
-		</nav>
+		<!-- Видео -->
+		<div class="header__video-wrapper">
+			<video class="header__video" autoplay muted loop playsinline poster="videos/poster.png">
+				<source src="videos/header-video.mp4" type="video/mp4">
+			</video>
+		</div>
+
+		<div class="container header__container">
+			<!-- Логотип -->
+			<a href="#" class="logo">
+				<picture>
+					<source media="(max-width: 639px)" srcset="images/icons/logo-320.svg">
+					<source media="(min-width: 640px) and (max-width: 999px)" srcset="images/icons/logo-640.svg">
+					<source media="(min-width: 1000px)" srcset="images/icons/logo.svg">
+					<img src="images/icons/logo.svg" alt="VYCHESLAWOO">
+				</picture>
+			</a>
+
+			<!-- Навигация (одна для всех устройств) -->
+			<nav class="nav" id="nav">
+				<div class="nav__wrapper">
+					<ul class="nav__list">
+						<li class="nav__item"><a href="#about" class="nav__link">ОБО МНЕ</a></li>
+						<li class="nav__item"><a href="#portfolio" class="nav__link">ПОРТФОЛИО</a></li>
+						<li class="nav__item"><a href="#services" class="nav__link">УСЛУГИ</a></li>
+						<li class="nav__item"><a href="#process" class="nav__link">ЭТАПЫ</a></li>
+						<li class="nav__item"><a href="#contacts" class="nav__link">КОНТАКТЫ</a></li>
+					</ul>
+
+					<ul class="nav__links">
+						<li class="nav__links-item"><a href=""></a>diprofile</li>
+						<li class="nav__links-item"><a href=""></a>behance</li>
+						<li class="nav__links-item"><a href=""></a>telegram</li>
+					</ul>
+				</div>
+				<a href="#" class="logo-burger">
+					<img src="images/icons/logo-burger.svg" alt="VYCHESLAWOO">
+				</a>
+				<!-- Кнопка CTA (показывается только на десктопе) -->
+				<a href="#order" class="btn btn--header">ЗАКАЗАТЬ САЙТ</a>
+
+				<!-- Кнопка закрытия меню (только для мобильной версии) -->
+				<button class="nav__close" id="navClose" aria-label="Закрыть меню">
+					<img class="close-btn" src="images/icons/menu-exit.svg" alt="#">
+				</button>
+			</nav>
+
+			<!-- Кнопка открытия меню (только для мобильной версии) -->
+			<button class="burger-btn" id="burger-btn" aria-label="Открыть меню" aria-expanded="false">
+				<span class="burger-btn__text">МЕНЮ</span>
+				<img class="burger-btn__icon" src="images/icons/menu-burger.svg" alt="#">
+			</button>
+		</div>
+		<div class="header__title-wrapper">
+			<h1 class="header__title">Vycheslawoo</h1>
+		</div>
 	</header>
 
 	<!-- Основной контент -->
 	<main>
 
 		<!-- Первый экран (Hero) -->
+		<section class="hero" id="hero">
+			<h1>Главный заголовок</h1>
+			<p>Подзаголовок или описание</p>
+			<span>TEST</span>
+			<a href="#about" class="btn">Узнать больше</a>
+		</section>
+
+		<section class="hero" id="hero">
+			<h1>Главный заголовок</h1>
+			<p>Подзаголовок или описание</p>
+			<span>TEST</span>
+			<a href="#about" class="btn">Узнать больше</a>
+		</section>
+
+		<section class="hero" id="hero">
+			<h1>Главный заголовок</h1>
+			<p>Подзаголовок или описание</p>
+			<span>TEST</span>
+			<a href="#about" class="btn">Узнать больше</a>
+		</section>
+
+		<section class="hero" id="hero">
+			<h1>Главный заголовок</h1>
+			<p>Подзаголовок или описание</p>
+			<span>TEST</span>
+			<a href="#about" class="btn">Узнать больше</a>
+		</section>
+
+
+		<section class="hero" id="hero">
+			<h1>Главный заголовок</h1>
+			<p>Подзаголовок или описание</p>
+			<span>TEST</span>
+			<a href="#about" class="btn">Узнать больше</a>
+		</section>
+
+		<section class="hero" id="hero">
+			<h1>Главный заголовок</h1>
+			<p>Подзаголовок или описание</p>
+			<span>TEST</span>
+			<a href="#about" class="btn">Узнать больше</a>
+		</section>
+
+		<section class="hero" id="hero">
+			<h1>Главный заголовок</h1>
+			<p>Подзаголовок или описание</p>
+			<span>TEST</span>
+			<a href="#about" class="btn">Узнать больше</a>
+		</section>
+
 		<section class="hero" id="hero">
 			<h1>Главный заголовок</h1>
 			<p>Подзаголовок или описание</p>
