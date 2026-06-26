@@ -9,14 +9,14 @@
 
 /* ===== ПЕРЕМЕННЫЕ (Design Tokens из Figma) ===== */
 :root {
-	/* Цвета — замени на значения из Figma */
-	--color-primary: #2563eb;
-	--color-dark: #1a1a1a;
-	--color-light: #ffffff;
-	--color-gray: #6b7280;
+	/* Цвета */
+	--color-white: #FFFFFF;
+	--color-black: #000000;
+	--color-red: #AD0013;
 
 	/* Шрифты */
 	--font-main: 'Inter', system-ui, -apple-system, sans-serif;
+	--font-title: 'Bebas Neue Cyrillic', 'Bebas Neue', sans-serif;
 
 	/* Размеры */
 	--container-width: 1200px;
