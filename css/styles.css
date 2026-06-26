@@ -1,0 +1,64 @@
+/* ===== RESET ===== */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ===== ПЕРЕМЕННЫЕ (Design Tokens из Figma) ===== */
+:root {
+	/* Цвета — замени на значения из Figma */
+	--color-primary: #2563eb;
+	--color-dark: #1a1a1a;
+	--color-light: #ffffff;
+	--color-gray: #6b7280;
+
+	/* Шрифты */
+	--font-main: 'Inter', system-ui, -apple-system, sans-serif;
+
+	/* Размеры */
+	--container-width: 1200px;
+	--container-padding: 20px;
+
+	/* Анимации */
+	--transition-fast: 0.2s ease;
+	--transition-normal: 0.4s ease;
+}
+
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-main);
+	font-size: 16px;
+	line-height: 1.6;
+	color: var(--color-dark);
+	background-color: var(--color-light);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+/* ===== КОНТЕЙНЕР ===== */
+.container {
+	max-width: var(--container-width);
+	margin: 0 auto;
+	padding: 0 var(--container-padding);
+}
