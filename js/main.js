@@ -44,6 +44,7 @@ document.addEventListener('keydown', (e) => {
 	}
 });
 
+// Загрузка постера видео
 document.addEventListener('DOMContentLoaded', () => {
 	const video = document.querySelector('.header__video');
 
@@ -100,5 +101,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	aboutTexts.forEach(text => {
 		observer.observe(text);
 	});
-
 });
