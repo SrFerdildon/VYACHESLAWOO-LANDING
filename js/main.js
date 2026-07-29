@@ -109,14 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			scrollTrigger: {
 				trigger: item,
 				start: 'top 100%',
+				/*end: 'bottom 20%',*/
 				toggleActions: 'play none none reverse',
 			},
-			opacity: 1,
 			y: 0,
 			scale: 1,
-			duration: 1,
+			duration: 1.5,
 			delay: index * 0.2,
-			ease: 'power2.out',
+			ease: 'power3.out',
 		});
 	});
 });
