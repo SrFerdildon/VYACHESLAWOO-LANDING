@@ -14,7 +14,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bebas+Neue+Cyrillic&family=Inter:wght@400;500;600;700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@200;300;400;500;600;700&display=swap"
 		rel="stylesheet">
 	<!-- Стили -->
 	<link rel="stylesheet" href="css/styles.css">
@@ -58,9 +58,7 @@
 						<li class="nav__links-item"><a href=""></a>telegram</li>
 					</ul>
 				</div>
-				<a href="#" class="logo-burger">
-					<img src="images/icons/logo-burger.svg" alt="VYCHESLAWOO">
-				</a>
+				<img class="logo-burger" src="images/icons/logo-burger.svg" alt="VYCHESLAWOO">
 
 				<!-- Кнопка закрытия меню (только для мобильной версии) -->
 				<button class="nav__close" id="navClose" aria-label="Закрыть меню">
@@ -84,70 +82,131 @@
 
 	<!-- Основной контент -->
 	<main>
-
-		<!-- Первый экран (Hero) -->
-		<section class="hero" id="hero">
-			<h1>Главный заголовок</h1>
-			<p>Подзаголовок или описание</p>
-			<span>TEST</span>
-			<a href="#about" class="btn">Узнать больше</a>
+		<!-- Обо мне -->
+		<section class="about container">
+			<p class="about__text-up">Обо мне</p>
+			<h2 class="about__header">Я Вячеслав UI/UX дизайнер</h2>
+			<div class="about__textblock">
+				<p class="about__text">обладаю более чем 5-летним опытом в создании цифровых продуктов. Я
+					специализируюсь на
+					разработке современного дизайна
+					веб-сайтов и интуитивно понятных интерфейсов, которые не только выглядят стильно и привлекательно,
+					но и
+					эффективно
+					решают реальные проблемы пользователей.</p>
+				<p class="about__text">Мой подход сочетает творческий подход с практическим мышлением: я всегда ставлю
+					во
+					главу угла удобство, доступность и
+					достижение бизнес-целей. На протяжении многих лет,</p>
+				<p class="about__text">Я реализовывал проекты для различных отраслей, от электронной коммерции до
+					мобильных
+					приложений, где каждый элемент
+					интерфейса тщательно продуман для повышения вовлеченности и конверсии.</p>
+			</div>
+			<div class="about__content">
+				<div class="about__content-item">
+					<span class="about__content-head">[ с 2020 года ]</span>
+					<p class="about__content-text">Я развиваюсь в области дизайна</p>
+				</div>
+				<div class="about__content-item">
+					<span class="about__content-head">[ вдохновение ]</span>
+					<p class="about__content-text">основанный на различных явлениях дизайна</p>
+				</div>
+				<div class="about__content-item">
+					<span class="about__content-head">[ Процесс ]</span>
+					<p class="about__content-text">Я придерживаюсь строго упорядоченного рабочего процесса</p>
+				</div>
+				<div class="about__content-item">
+					<span class="about__content-head">[ результат ]</span>
+					<p class="about__content-text">Основной принцип моей работы — достижение результата проекта</p>
+				</div>
+			</div>
 		</section>
-
-		<section class="hero" id="hero">
-			<h1>Главный заголовок</h1>
-			<p>Подзаголовок или описание</p>
-			<span>TEST</span>
-			<a href="#about" class="btn">Узнать больше</a>
+		<!-- Портфолио -->
+		<section class="portfolio container">
+			<h2 class="portfolio__header">Портфолио</h2>
+			<div class="portfolio__wrapper">
+				<div class="portfolio__item">
+					<a href="" class="portfolio__item-image">
+						<img src="images/content/nova.png" alt="Nova preview">
+					</a>
+					<div class="portfolio__item-bottom">
+						<div class="portfolio__item-left">
+							<p>Nova</p>
+							<a href="" class="portfolio__dropfile">
+								<p>Dropfile</p>
+								<img src="images/icons/dropfile.svg" alt="arrow">
+							</a>
+						</div>
+						<div class="portfolio__item-right">
+							<p class="portfolio__tag">Дизайн</p>
+							<p class="portfolio__tag">Taptop</p>
+						</div>
+					</div>
+				</div>
+				<div class="portfolio__item">
+					<a href="" class="portfolio__item-image">
+						<img src="images/content/future.png" alt="Future preview">
+					</a>
+					<div class="portfolio__item-bottom">
+						<div class="portfolio__item-left">
+							<p>Future</p>
+							<a href="" class="portfolio__dropfile">
+								<p>Dropfile</p>
+								<img src="images/icons/dropfile.svg" alt="arrow">
+							</a>
+						</div>
+						<div class="portfolio__item-right">
+							<p class="portfolio__tag">Дизайн</p>
+						</div>
+					</div>
+				</div>
+				<div class="portfolio__item">
+					<a href="" class="portfolio__item-image">
+						<img src="images/content/olya.art.png" alt="Olya.art preview">
+					</a>
+					<div class="portfolio__item-bottom">
+						<div class="portfolio__item-left">
+							<p>Olya.art</p>
+							<a href="" class="portfolio__dropfile">
+								<p>Dropfile</p>
+								<img src="images/icons/dropfile.svg" alt="arrow">
+							</a>
+						</div>
+						<div class="portfolio__item-right">
+							<p class="portfolio__tag">Дизайн</p>
+							<p class="portfolio__tag">Taptop</p>
+						</div>
+					</div>
+				</div>
+				<div class="portfolio__item">
+					<a href="" class="portfolio__item-image">
+						<img src="images/content/hut.png" alt="[Hut] preview">
+					</a>
+					<div class="portfolio__item-bottom">
+						<div class="portfolio__item-left">
+							<p>[Hut]</p>
+							<a href="" class="portfolio__dropfile">
+								<p>Dropfile</p>
+								<img src="images/icons/dropfile.svg" alt="arrow">
+							</a>
+						</div>
+						<div class="portfolio__item-right">
+							<p class="portfolio__tag">Дизайн</p>
+							<p class="portfolio__tag">Taptop</p>
+						</div>
+					</div>
+				</div>
+				<a href="" class="portfolio__all-small">Все проекты</a>
+				<a href="" class="portfolio__all-big">Все проекты</a>
+			</div>
 		</section>
-
-		<section class="hero" id="hero">
-			<h1>Главный заголовок</h1>
-			<p>Подзаголовок или описание</p>
-			<span>TEST</span>
-			<a href="#about" class="btn">Узнать больше</a>
+		<!-- Услуги -->
+		<section class="services container">
 		</section>
-
-		<section class="hero" id="hero">
-			<h1>Главный заголовок</h1>
-			<p>Подзаголовок или описание</p>
-			<span>TEST</span>
-			<a href="#about" class="btn">Узнать больше</a>
+		<!-- Этапы -->
+		<section class="stages container">
 		</section>
-
-
-		<section class="hero" id="hero">
-			<h1>Главный заголовок</h1>
-			<p>Подзаголовок или описание</p>
-			<span>TEST</span>
-			<a href="#about" class="btn">Узнать больше</a>
-		</section>
-
-		<section class="hero" id="hero">
-			<h1>Главный заголовок</h1>
-			<p>Подзаголовок или описание</p>
-			<span>TEST</span>
-			<a href="#about" class="btn">Узнать больше</a>
-		</section>
-
-		<section class="hero" id="hero">
-			<h1>Главный заголовок</h1>
-			<p>Подзаголовок или описание</p>
-			<span>TEST</span>
-			<a href="#about" class="btn">Узнать больше</a>
-		</section>
-
-		<section class="hero" id="hero">
-			<h1>Главный заголовок</h1>
-			<p>Подзаголовок или описание</p>
-			<span>TEST</span>
-			<a href="#about" class="btn">Узнать больше</a>
-		</section>
-
-		<!-- Следующие секции -->
-		<section class="about" id="about">
-			<h2>О нас</h2>
-		</section>
-
 	</main>
 
 	<!-- Подвал -->

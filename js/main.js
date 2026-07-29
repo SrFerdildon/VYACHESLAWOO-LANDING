@@ -1,3 +1,4 @@
+/*ДЛЯ АНИМАЦИИ КНОПКИ МЕНЮ*/
 // Элементы
 const burger = document.getElementById('burger-btn');
 const nav = document.getElementById('nav');
@@ -66,4 +67,38 @@ document.addEventListener('DOMContentLoaded', () => {
 		video.parentElement.style.backgroundSize = 'cover';
 		video.style.display = 'none';
 	}
+});
+
+/*ДЛЯ АНИМАЦИИ ВСПЛЫТИЯ ТЕКСТА*/
+// Ждем загрузки DOM
+document.addEventListener('DOMContentLoaded', () => {
+
+	// Находим все текстовые блоки в секции About
+	const aboutTexts = document.querySelectorAll(".about__text-up, .about__header, .about__text, .about__content-item, .portfolio__header, .portfolio__item, .portfolio__item-image, .portfolio__all-big, .portfolio__all-small");
+	// Настройки Observer
+	const observerOptions = {
+		root: null, // наблюдение относительно viewport
+		rootMargin: '0px',
+		threshold: 0.5 // анимация запустится, когда 50% элемента видно
+	};
+
+	// Создаем Observer
+	const observer = new IntersectionObserver((entries, observer) => {
+		entries.forEach(entry => {
+			// Если элемент появился в viewport
+			if (entry.isIntersecting) {
+				// Добавляем класс для запуска анимации
+				entry.target.classList.add('animated');
+
+				// Перестаем наблюдать за этим элементом (анимация один раз)
+				observer.unobserve(entry.target);
+			}
+		});
+	}, observerOptions);
+
+	// Начинаем наблюдение за каждым текстовым блоком
+	aboutTexts.forEach(text => {
+		observer.observe(text);
+	});
+
 });
