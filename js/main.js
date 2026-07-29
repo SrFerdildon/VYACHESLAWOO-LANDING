@@ -44,8 +44,9 @@ document.addEventListener('keydown', (e) => {
 	}
 });
 
-// Загрузка постера видео
+
 document.addEventListener('DOMContentLoaded', () => {
+	// Загрузка постера видео
 	const video = document.querySelector('.header__video');
 
 	// Проверка: пользователь хочет меньше анимаций?
@@ -68,14 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		video.parentElement.style.backgroundSize = 'cover';
 		video.style.display = 'none';
 	}
-});
 
-/*ДЛЯ АНИМАЦИИ ВСПЛЫТИЯ ТЕКСТА*/
-// Ждем загрузки DOM
-document.addEventListener('DOMContentLoaded', () => {
-
+	/*ДЛЯ АНИМАЦИИ ВСПЛЫТИЯ ТЕКСТА*/
 	// Находим все текстовые блоки в секции About
-	const aboutTexts = document.querySelectorAll(".about__text-up, .about__header, .about__text, .about__content-item, .portfolio__header, .portfolio__item, .portfolio__item-image, .portfolio__all-big, .portfolio__all-small");
+	const upAnimation = document.querySelectorAll(".about__text-up, .about__header, .about__text, .about__content-item, .portfolio__header, .portfolio__item, .portfolio__item-image, .portfolio__all-big, .portfolio__all-small");
 	// Настройки Observer
 	const observerOptions = {
 		root: null, // наблюдение относительно viewport
@@ -98,7 +95,28 @@ document.addEventListener('DOMContentLoaded', () => {
 	}, observerOptions);
 
 	// Начинаем наблюдение за каждым текстовым блоком
-	aboutTexts.forEach(text => {
+	upAnimation.forEach(text => {
 		observer.observe(text);
+	});
+
+	// Анимация с привязкой к скроллу
+	gsap.registerPlugin(ScrollTrigger);
+
+	const scrollAnimation = document.querySelectorAll('.services__item, .services__header');
+
+	gsap.utils.toArray(scrollAnimation).forEach((item, index) => {
+		gsap.to(item, {
+			scrollTrigger: {
+				trigger: item,
+				start: 'top 100%',
+				toggleActions: 'play none none reverse',
+			},
+			opacity: 1,
+			y: 0,
+			scale: 1,
+			duration: 1,
+			delay: index * 0.2,
+			ease: 'power2.out',
+		});
 	});
 });
