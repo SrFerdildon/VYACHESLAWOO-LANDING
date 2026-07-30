@@ -162,4 +162,76 @@ document.addEventListener('DOMContentLoaded', () => {
 			duration: 3,
 		}, '+=0');
 	}
+
+
+	// ===== АНИМАЦИЯ СЕКЦИИ FOOTER =====
+	function createFooterSliceTrail(selector, slicesCount = 25) {
+		const container = document.querySelector(selector);
+		if (!container) return;
+
+		const text = container.dataset.text;
+		container.style.setProperty('--slices', slicesCount);
+
+		// Создаем основной текст
+		const baseText = document.createElement('div');
+		baseText.className = 'footer__slice-text__base';
+		baseText.textContent = text;
+		container.appendChild(baseText);
+
+		// Создаем полосы
+		for (let i = slicesCount; i > 0; i--) {
+			const slice = document.createElement('div');
+			slice.className = 'footer__slice-text__slice';
+			slice.textContent = text;
+			slice.style.setProperty('--i', i);
+			container.appendChild(slice);
+		}
+
+		const slices = container.querySelectorAll('.footer__slice-text__slice');
+		const footer = container.querySelector('.footer');
+		gsap.set(slices, { opacity: 1, y: 0 });
+		const heightSelector = gsap.getProperty(selector, 'height') / 100;
+		gsap.to(slices, {
+			opacity: 1,
+			y: (i) => -(heightSelector * 8) - i / 1.4 * (heightSelector * 10), // Движение ВВЕРХ (отрицательное значение)
+			duration: 1,
+			stagger: {
+				each: 0.05,
+				from: 'start' // Толстые полосы появляются первыми
+			},
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: selector,
+				start: 'top 100%',
+				end: 'bottom 150%',
+				scrub: 3,
+				toggleActions: 'play none none reverse',
+			},
+		});
+	}
+
+	// Запуск анимации для футера
+	createFooterSliceTrail('.footer__slice-text', 9);
+
+	// ===== КНОПКА "НАВЕРХ" =====
+	const scrollTopBtn = document.getElementById('scrollTop');
+
+	if (scrollTopBtn) {
+		// Показываем/скрываем кнопку при скролле
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 400) { // Показываем после 400px прокрутки
+				scrollTopBtn.classList.add('scroll-top--visible');
+			} else {
+				scrollTopBtn.classList.remove('scroll-top--visible');
+			}
+		});
+
+		// Плавная прокрутка наверх при клике
+		scrollTopBtn.addEventListener('click', () => {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		});
+	}
 });

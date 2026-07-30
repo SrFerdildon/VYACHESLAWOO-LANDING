@@ -48,7 +48,7 @@
 						<li class="nav__item"><a href="#about" class="nav__link underlinemod">ОБО МНЕ</a></li>
 						<li class="nav__item"><a href="#portfolio" class="nav__link underlinemod">ПОРТФОЛИО</a></li>
 						<li class="nav__item"><a href="#services" class="nav__link underlinemod">УСЛУГИ</a></li>
-						<li class="nav__item"><a href="#process" class="nav__link underlinemod">ЭТАПЫ</a></li>
+						<li class="nav__item"><a href="#stages" class="nav__link underlinemod">ЭТАПЫ</a></li>
 						<li class="nav__item"><a href="#contacts" class="nav__link underlinemod">КОНТАКТЫ</a></li>
 					</ul>
 
@@ -83,7 +83,7 @@
 	<!-- Основной контент -->
 	<main>
 		<!-- Обо мне -->
-		<section class="about container">
+		<section class="about container" id="about">
 			<p class="about__text-up">Обо мне</p>
 			<h2 class="about__header">Я Вячеслав UI/UX дизайнер</h2>
 			<div class="about__textblock">
@@ -123,7 +123,7 @@
 			</div>
 		</section>
 		<!-- Портфолио -->
-		<section class="portfolio container">
+		<section class="portfolio container" id="portfolio">
 			<h2 class="portfolio__header">Портфолио</h2>
 			<div class="portfolio__wrapper">
 				<div class="portfolio__item">
@@ -202,7 +202,7 @@
 			</div>
 		</section>
 		<!-- Услуги -->
-		<section class="services container">
+		<section class="services container" id="services">
 			<div class="services__wrapper">
 				<h2 class="services__header">Услуги</h2>
 				<div class="services__item">
@@ -262,7 +262,7 @@
 			</div>
 		</section>
 		<!-- Этапы -->
-		<section class="stages">
+		<section class="stages" id="stages">
 			<div class="stages__reveal"></div>
 			<h2 class="stages__header">Этапы</h2>
 			<div class="stages__wrapper">
@@ -391,13 +391,54 @@
 	</main>
 
 	<!-- Подвал -->
-	<footer class="footer container">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste est eveniet ad sapiente perspiciatis veniam
-			nisi animi qui repellat et unde, praesentium ratione deserunt eius recusandae vitae rem esse consequuntur
-			beatae doloremque ullam fugit vel accusamus voluptatibus? Blanditiis dicta vero perspiciatis vitae quam iure
-			eligendi animi possimus, reiciendis quae perferendis.</p>
-		<p>&copy; 2026 Название</p>
+	<footer class="footer container" id="contacts">
+		<div class="footer__content">
+			<div class="footer__mobile">
+				<div class="footer__text">
+					<p class="footer__line">Готовы обсудить ваш проект?</p>
+					<p class="footer__line">Свяжитесь с нами, и давайте создадим что-нибудь потрясающее вместе!</p>
+				</div>
+				<a href="#order" class="btn footer__btn">ЗАКАЗАТЬ САЙТ</a>
+			</div>
+			<div class="footer__left">
+				<div class="footer__nav-wrapper">
+					<ul class="footer__nav">
+						<li class="footer__nav-item"><a href="#about" class="footer__link">ОБО МНЕ</a></li>
+						<li class="footer__nav-item"><a href="#portfolio" class="footer__link">ПОРТФОЛИО</a></li>
+						<li class="footer__nav-item"><a href="#services" class="footer__link">УСЛУГИ</a></li>
+						<li class="footer__nav-item"><a href="#stages" class="footer__link">ЭТАПЫ</a></li>
+						<li class="footer__nav-item"><a href="#contacts" class="footer__link">КОНТАКТЫ</a></li>
+					</ul>
+				</div>
+				<div class="footer__location">
+					<span>ростов-на-дону, россия MSK +3</span>
+					<a href="https://yandex.ru/maps/?ll=39.718813,47.222109&z=19&l=map" class="footer__link"
+						target="_blank">47.222109° N 39.718813°
+						E</a>
+				</div>
+			</div>
+			<div class="footer__right">
+				<div class="footer__links">
+					<a href="#" class="footer__link">Diprofile</a>
+					<a href="#" class="footer__link">Behance</a>
+					<a href="#" class="footer__link">Telegram</a>
+				</div>
+				<div class="footer__rights">
+					<span>Все права защищены</span>
+					<span>2026</span>
+				</div>
+			</div>
+		</div>
+		<div class="footer__slice-text" data-text="Vycheslawoo"></div>
+
 	</footer>
+
+	<button class="scroll-top" id="scrollTop" aria-label="Вернуться наверх">
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+				stroke-linejoin="round" />
+		</svg>
+	</button>
 
 	<!-- Скрипты -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
