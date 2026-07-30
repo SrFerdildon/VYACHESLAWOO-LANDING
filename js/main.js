@@ -99,6 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		observer.observe(text);
 	});
 
+
+	// ===== АНИМАЦИЯ СЕКЦИИ SERVICES =====
 	// Анимация с привязкой к скроллу
 	gsap.registerPlugin(ScrollTrigger);
 
@@ -115,8 +117,49 @@ document.addEventListener('DOMContentLoaded', () => {
 			y: 0,
 			scale: 1,
 			duration: 1.5,
-			delay: index * 0.2,
+			delay: 0.1,
 			ease: 'power3.out',
 		});
 	});
+
+	// ===== АНИМАЦИЯ СЕКЦИИ STAGES =====
+	const stagesSection = document.querySelector('.stages');
+	const stagesReveal = document.querySelector('.stages__reveal');
+	const stagesTrack = document.querySelector('.stages__wrapper');
+	const stagesHeader = document.querySelector('.stages__header');
+
+	if (stagesSection && stagesTrack) {
+		// Вычисляем длину горизонтального скролла
+		const getScrollAmount = () => {
+			return -(stagesTrack.scrollWidth + window.innerWidth * 1.5);
+		};
+
+		// Создаем ЕДИНЫЙ timeline для всей секции
+		const stagesTl = gsap.timeline({
+			scrollTrigger: {
+				trigger: stagesSection,
+				start: 'top top', // Начинаем, когда верх секции достигает верха экрана
+				end: () => `+=${Math.abs(getScrollAmount()) * 2}`, // Длина = ширина трека + 500px на раскрытие круга
+				pin: true, // Приклеиваем секцию
+				pinSpacing: true,
+				scrub: 2, // Плавная привязка к скроллу
+				invalidateOnRefresh: true,
+				anticipatePin: 1,
+			}
+		});
+
+		// 1. Сначала раскрываем круг
+		stagesTl.to(stagesReveal, {
+			clipPath: 'circle(150% at 50% 50%)',
+			duration: 1.5,
+			ease: 'power2.inOut',
+		});
+
+		// 2. Начинаем двигать карточки
+		stagesTl.to(stagesTrack, {
+			x: getScrollAmount,
+			ease: 'none',
+			duration: 3,
+		}, '+=0');
+	}
 });
