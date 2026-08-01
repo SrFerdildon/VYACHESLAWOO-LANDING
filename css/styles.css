@@ -19,6 +19,32 @@
 	}
 }
 
+/* Анимация появления слева направо */
+@keyframes fadeInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-50%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/* Анимация появления справа налево */
+@keyframes fadeInRight {
+	from {
+		opacity: 0;
+		transform: translateX(50%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
 /* Локальный шрифт кириллицы*/
 @font-face {
 	font-family: 'Bebas Neue Cyrillic';
