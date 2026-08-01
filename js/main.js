@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		// 1. Сначала раскрываем круг
 		stagesTl.to(stagesReveal, {
 			clipPath: 'circle(150% at 50% 50%)',
-			duration: 1.5,
+			duration: 5,
 			ease: 'power2.inOut',
 		});
 
