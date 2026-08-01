@@ -1383,9 +1383,9 @@ button:focus-visible {
 	height: 100%;
 	pointer-events: none;
 	clip-path: inset(
-		-15%
+		0
 		0 
-		calc(85% - (var(--i) / 3 * 1.9%))
+		calc(79% + (var(--i) / 3 * 1.9%))
 		0
 	);
 	opacity: 0;

@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		container.appendChild(baseText);
 
 		// Создаем полосы
-		for (let i = slicesCount; i > 0; i--) {
+		for (let i = 0; i < slicesCount; i++) {
 			const slice = document.createElement('div');
 			slice.className = 'footer__slice-text__slice';
 			slice.textContent = text;
