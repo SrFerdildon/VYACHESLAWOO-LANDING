@@ -3,13 +3,39 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Vyacheslawoo</title>
-	<meta name="description" content="Краткое описание сайта для SEO">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vyacheslawoo — дизайн студия | Создание сайтов и интерфейсов</title>
+	<meta name="description"
+		content="Дизайн студия с 5+ летним опытом. Создаем современные сайты, интернет-магазины и мобильные приложения. Разработка в Figma, Tilda, Webflow.">
+	<meta name="keywords"
+		content="Дизайн студия, UI UX дизайнер, веб-дизайн, создание сайтов, Figma, Tilda, Webflow, дизайн интерфейсов, верстка, разработка сайтов, Ростов-на-Дону">
+	<meta name="author" content="Vyacheslawoo">
+	<meta name="robots" content="index, follow">
+	<!-- TODO: ЗАМЕНИТЬ ПРИ ПУБЛИКАЦИИ-->
+	<link rel="canonical" href="https://srferdildon.github.io/VYACHESLAWOO-LANDING/">
+
+	<!-- Минимальный набор для красивых ссылок в Telegram и VK -->
+	<meta property="og:title" content="Vyacheslawoo — дизайн студия">
+	<meta property="og:description"
+		content="Дизайн студия с 5+ летним опытом. Создаем современные сайты, интернет-магазины и мобильные приложения.">
+	<meta property="og:image" content="https://srferdildon.github.io/VYACHESLAWOO-LANDING/images/og-image.png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:type" content="website">
+
+	<!-- ===== ТЕМА И ЦВЕТА ===== -->
+	<meta name="theme-color" content="#000000">
+	<meta name="color-scheme" content="dark">
 
 	<!-- Favicon -->
-	<link rel="icon" href="#" type="image/x-icon">
+	<link rel="icon" href="icon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+	<!-- Предзагрузка ресурсов -->
+	<link rel="preload" href="css/styles.css" as="style">
+	<link rel="preload" href="js/main.js" as="script">
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
 	<!-- Шрифты -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +51,7 @@
 	<header class="header">
 		<!-- Видео -->
 		<div class="header__video-wrapper">
-			<video class="header__video" autoplay muted loop playsinline poster="videos/poster.png">
+			<video class="header__video" autoplay muted loop playsinline poster="videos/poster.webp">
 				<source src="videos/header-video.mp4" type="video/mp4">
 			</video>
 		</div>
@@ -53,9 +79,12 @@
 					</ul>
 
 					<ul class="nav__links">
-						<li class="nav__links-item"><a href=""></a>diprofile</li>
-						<li class="nav__links-item"><a href=""></a>behance</li>
-						<li class="nav__links-item"><a href=""></a>telegram</li>
+						<li class="nav__links-item"><a href="https://dprofile.ru/vycheslawoo" target="_blank"
+								rel="noopener noreferrer"></a>diprofile</li>
+						<li class="nav__links-item"><a href="https://www.behance.net/mrdeadok" target="_blank"
+								rel="noopener noreferrer"></a>behance</li>
+						<li class="nav__links-item"><a href="https://t.me/Vycheslawoo" target="_blank"
+								rel="noopener noreferrer"></a>telegram</li>
 					</ul>
 				</div>
 				<img class="logo-burger" src="images/icons/logo-burger.svg" alt="VYCHESLAWOO">
@@ -67,7 +96,8 @@
 			</nav>
 
 			<!-- Кнопка CTA (показывается только на десктопе) -->
-			<a href="#order" class="btn btn--header">ЗАКАЗАТЬ САЙТ</a>
+			<a href="https://t.me/Vycheslawoo" target="_blank" rel="noopener noreferrer"
+				class="btn btn--header">ЗАКАЗАТЬ САЙТ</a>
 
 			<!-- Кнопка открытия меню (только для мобильной версии) -->
 			<button class="burger-btn" id="burger-btn" aria-label="Открыть меню" aria-expanded="false">
@@ -84,41 +114,37 @@
 	<main>
 		<!-- Обо мне -->
 		<section class="about container" id="about">
-			<p class="about__text-up">Обо мне</p>
-			<h2 class="about__header">Я Вячеслав UI/UX дизайнер</h2>
+			<p class="about__text-up">О нас</p>
+			<h2 class="about__header">Мы дизайн студия</h2>
 			<div class="about__textblock">
-				<p class="about__text">обладаю более чем 5-летним опытом в создании цифровых продуктов. Я
-					специализируюсь на
-					разработке современного дизайна
+				<p class="about__text">обладаем более чем 5-летним опытом в создании цифровых продуктов. Мы
+					специализируемся на разработке современного дизайна
 					веб-сайтов и интуитивно понятных интерфейсов, которые не только выглядят стильно и привлекательно,
-					но и
-					эффективно
+					но и эффективно
 					решают реальные проблемы пользователей.</p>
-				<p class="about__text">Мой подход сочетает творческий подход с практическим мышлением: я всегда ставлю
-					во
-					главу угла удобство, доступность и
+				<p class="about__text">наш подход сочетает творческий подход с практическим мышлением: мы всегда ставим
+					во главу угла удобство, доступность и
 					достижение бизнес-целей. На протяжении многих лет,</p>
-				<p class="about__text">Я реализовывал проекты для различных отраслей, от электронной коммерции до
-					мобильных
-					приложений, где каждый элемент
+				<p class="about__text">Мы реализовывали проекты для различных отраслей, от электронной коммерции до
+					мобильных приложений, где каждый элемент
 					интерфейса тщательно продуман для повышения вовлеченности и конверсии.</p>
 			</div>
 			<div class="about__content">
 				<div class="about__content-item">
 					<span class="about__content-head">[ с 2020 года ]</span>
-					<p class="about__content-text">Я развиваюсь в области дизайна</p>
+					<p class="about__content-text">развиваемся в области дизайна</p>
 				</div>
 				<div class="about__content-item">
 					<span class="about__content-head">[ вдохновение ]</span>
-					<p class="about__content-text">основанный на различных явлениях дизайна</p>
+					<p class="about__content-text">основано на различных явлениях дизайна</p>
 				</div>
 				<div class="about__content-item">
 					<span class="about__content-head">[ Процесс ]</span>
-					<p class="about__content-text">Я придерживаюсь строго упорядоченного рабочего процесса</p>
+					<p class="about__content-text">мы придерживаемся строго упорядоченного рабочего процесса</p>
 				</div>
 				<div class="about__content-item">
 					<span class="about__content-head">[ результат ]</span>
-					<p class="about__content-text">Основной принцип моей работы — достижение результата проекта</p>
+					<p class="about__content-text">Основной принцип нашей работы — достижение результата проекта</p>
 				</div>
 			</div>
 		</section>
@@ -127,13 +153,16 @@
 			<h2 class="portfolio__header">Портфолио</h2>
 			<div class="portfolio__wrapper">
 				<div class="portfolio__item">
-					<a href="" class="portfolio__item-image underlinemod">
-						<img src="images/content/nova.png" alt="Nova preview">
+					<a href="https://dprofile.ru/case/150925/nova-e-commerce" target="_blank" rel="noopener noreferrer"
+						class="portfolio__item-image underlinemod">
+						<img src="images/content/nova.webp" loading="lazy" decoding="async"
+							alt="Nova site design preview">
 					</a>
 					<div class="portfolio__item-bottom">
 						<div class="portfolio__item-left">
 							<p>Nova</p>
-							<a href="" class="portfolio__dropfile underlinemod">
+							<a href="https://dprofile.ru/case/150925/nova-e-commerce" target="_blank"
+								rel="noopener noreferrer" class="portfolio__dropfile underlinemod">
 								<p>Dropfile</p>
 								<img src="images/icons/dropfile.svg" alt="arrow">
 							</a>
@@ -145,13 +174,16 @@
 					</div>
 				</div>
 				<div class="portfolio__item">
-					<a href="" class="portfolio__item-image underlinemod">
-						<img src="images/content/future.png" alt="Future preview">
+					<a href="https://dprofile.ru/case/144625/future-bank-mobile-app" target="_blank"
+						rel="noopener noreferrer" class="portfolio__item-image underlinemod">
+						<img src="images/content/future.webp" loading="lazy" decoding="async"
+							alt="Future site design preview">
 					</a>
 					<div class="portfolio__item-bottom">
 						<div class="portfolio__item-left">
 							<p>Future</p>
-							<a href="" class="portfolio__dropfile underlinemod">
+							<a href="https://dprofile.ru/case/144625/future-bank-mobile-app" target="_blank"
+								rel="noopener noreferrer" class="portfolio__dropfile underlinemod">
 								<p>Dropfile</p>
 								<img src="images/icons/dropfile.svg" alt="arrow">
 							</a>
@@ -162,13 +194,16 @@
 					</div>
 				</div>
 				<div class="portfolio__item">
-					<a href="" class="portfolio__item-image underlinemod">
-						<img src="images/content/olya.art.png" alt="Olya.art preview">
+					<a href="https://dprofile.ru/case/141390/olyaart" target="_blank" rel="noopener noreferrer"
+						class="portfolio__item-image underlinemod">
+						<img src="images/content/olya.art.webp" loading="lazy" decoding="async"
+							alt="Olya.art site design preview">
 					</a>
 					<div class="portfolio__item-bottom">
 						<div class="portfolio__item-left">
 							<p>Olya.art</p>
-							<a href="" class="portfolio__dropfile underlinemod">
+							<a href="https://dprofile.ru/case/141390/olyaart" target="_blank" rel="noopener noreferrer"
+								class="portfolio__dropfile underlinemod">
 								<p>Dropfile</p>
 								<img src="images/icons/dropfile.svg" alt="arrow">
 							</a>
@@ -180,13 +215,16 @@
 					</div>
 				</div>
 				<div class="portfolio__item">
-					<a href="" class="portfolio__item-image underlinemod">
-						<img src="images/content/hut.png" alt="[Hut] preview">
+					<a href="https://dprofile.ru/case/98176/hut-arenda-domikov-u-ozera" target="_blank"
+						rel="noopener noreferrer" class="portfolio__item-image underlinemod">
+						<img src="images/content/hut.webp" loading="lazy" decoding="async"
+							alt="[Hut] site design preview">
 					</a>
 					<div class="portfolio__item-bottom">
 						<div class="portfolio__item-left">
 							<p>[Hut]</p>
-							<a href="" class="portfolio__dropfile underlinemod">
+							<a href="https://dprofile.ru/case/98176/hut-arenda-domikov-u-ozera" target="_blank"
+								rel="noopener noreferrer" class="portfolio__dropfile underlinemod">
 								<p>Dropfile</p>
 								<img src="images/icons/dropfile.svg" alt="arrow">
 							</a>
@@ -197,8 +235,11 @@
 						</div>
 					</div>
 				</div>
-				<a href="" class="portfolio__all-small underlinemod">Все проекты</a>
-				<a href="" class="portfolio__all-big">Все проекты</a>
+				<a href="https://dprofile.ru/vycheslawoo" target="_blank" rel="noopener noreferrer"
+					class="portfolio__all-small underlinemod">Все
+					проекты</a>
+				<a href="https://dprofile.ru/vycheslawoo" target="_blank" rel="noopener noreferrer"
+					class="portfolio__all-big">Все проекты</a>
 			</div>
 		</section>
 		<!-- Услуги -->
@@ -378,11 +419,11 @@
 					<div class="stages__card-content">
 						<div class="stages__card-line">
 							<img src="images/icons/stages-icon.svg" alt="#">
-							<p>Записываю кроткие видео для самостоятельного редактирования</p>
+							<p>Записываем короткие видео для самостоятельного редактирования</p>
 						</div>
 						<div class="stages__card-line">
 							<img src="images/icons/stages-icon.svg" alt="#">
-							<p>В течение 1 месяца слежу за работой и вношу исправления по мере нобходимости</p>
+							<p>В течение 1 месяца следим за работой и вносим исправления по мере необходимости</p>
 						</div>
 					</div>
 				</div>
@@ -398,7 +439,8 @@
 					<p class="footer__line">Готовы обсудить ваш проект?</p>
 					<p class="footer__line">Свяжитесь с нами, и давайте создадим что-нибудь потрясающее вместе!</p>
 				</div>
-				<a href="#order" class="btn footer__btn">ЗАКАЗАТЬ САЙТ</a>
+				<a href="https://t.me/Vycheslawoo" target="_blank" rel="noopener noreferrer"
+					class="btn footer__btn">ЗАКАЗАТЬ САЙТ</a>
 			</div>
 			<div class="footer__left">
 				<div class="footer__nav-wrapper">
@@ -413,15 +455,18 @@
 				<div class="footer__location">
 					<span>ростов-на-дону, россия MSK +3</span>
 					<a href="https://yandex.ru/maps/?ll=39.718813,47.222109&z=19&l=map" class="footer__link"
-						target="_blank">47.222109° N 39.718813°
+						rel="noopener noreferrer" target="_blank">47.222109° N 39.718813°
 						E</a>
 				</div>
 			</div>
 			<div class="footer__right">
 				<div class="footer__links">
-					<a href="#" class="footer__link">Diprofile</a>
-					<a href="#" class="footer__link">Behance</a>
-					<a href="#" class="footer__link">Telegram</a>
+					<a href="https://dprofile.ru/vycheslawoo" target="_blank" rel="noopener noreferrer"
+						class="footer__link">Diprofile</a>
+					<a href="https://www.behance.net/mrdeadok" target="_blank" rel="noopener noreferrer"
+						class="footer__link">Behance</a>
+					<a href="https://t.me/Vycheslawoo" target="_blank" rel="noopener noreferrer"
+						class="footer__link">Telegram</a>
 				</div>
 				<div class="footer__rights">
 					<span>Все права защищены</span>
@@ -434,8 +479,10 @@
 
 	</footer>
 
+	<!-- Стрелка для возврата наверх -->
 	<button class="scroll-top" id="scrollTop" aria-label="Вернуться наверх">
-		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none"
+			xmlns="http://www.w3.org/2000/svg">
 			<path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
 				stroke-linejoin="round" />
 		</svg>

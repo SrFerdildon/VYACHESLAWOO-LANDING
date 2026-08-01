@@ -46,6 +46,7 @@ document.addEventListener('keydown', (e) => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+	/* ЗАГРУЗКА ВСТУПИТЕЛЬНОГО ВИДЕО */
 	// Загрузка постера видео
 	const video = document.querySelector('.header__video');
 
@@ -193,11 +194,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		const heightSelector = gsap.getProperty(selector, 'height') / 100;
 		gsap.to(slices, {
 			opacity: 1,
-			y: (i) => -(heightSelector * 8) - i / 1.4 * (heightSelector * 10), // Движение ВВЕРХ (отрицательное значение)
+			y: (i) => -(heightSelector * 8) - i / 1.4 * (heightSelector * 10),
 			duration: 1,
 			stagger: {
 				each: 0.05,
-				from: 'start' // Толстые полосы появляются первыми
+				from: 'start'
 			},
 			ease: 'power2.out',
 			scrollTrigger: {
@@ -235,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-
+	/* СНИЖЕНИЕ ПРОЗРАЧНОСТИ КНОПКИ МЕНЮ */
 	const scrollBurgerBtn = document.getElementById('burger-btn');
 
 	if (scrollBurgerBtn) {

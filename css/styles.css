@@ -75,15 +75,20 @@
 /* ===== БАЗОВЫЕ СТИЛИ ===== */
 html {
 	scroll-behavior: smooth;
+	scroll-padding-top: 80px;
 }
 
 body {
 	font-family: var(--font-main);
 	font-size: 16px;
-	line-height: 1.6;
 	color: var(--color-white);
 	background-color: var(--color-black);
 	overflow-x: hidden;
+	/* Safe areas для iPhone */
+	padding-top: env(safe-area-inset-top);
+	padding-bottom: env(safe-area-inset-bottom);
+	padding-left: env(safe-area-inset-left);
+	padding-right: env(safe-area-inset-right);
 }
 
 img {
@@ -101,6 +106,17 @@ a {
 ul,
 ol {
 	list-style: none;
+}
+
+*:focus-visible {
+	outline: 2px solid var(--color-red);
+	outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+	outline: 2px solid var(--color-red);
+	outline-offset: 2px;
 }
 
 .animated {
@@ -1521,8 +1537,8 @@ ol {
 @media (min-width: 1000px) {
 	.scroll-top {
 		position: fixed;
-		bottom: 40px;
-		right: 40px;
+		bottom: calc(40px + env(safe-area-inset-bottom));
+		right: calc(40px + env(safe-area-inset-right));
 		width: 60px;
 		height: 60px;
 		border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1548,7 +1564,6 @@ ol {
 	}
 
 	.scroll-top:hover {
-		color: var(--color-white);
 		transform: translateY(-5px) scale(1.05);
 		box-shadow: 0 8px 30px rgba(173, 0, 19, 0.4);
 	}
