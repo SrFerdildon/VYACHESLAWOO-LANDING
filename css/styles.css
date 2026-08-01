@@ -1350,8 +1350,7 @@ button:focus-visible {
 }
 
 /* Контейнер для анимации */
-.footer__slice-text,
-.footer__slice-text-mobile {
+.footer__slice-text {
 	display: block;
 	position: relative;
 	font-family: var(--font-title);
@@ -1364,10 +1363,6 @@ button:focus-visible {
 	line-height: 1;
 	pointer-events: none;
 }
-
-/*.footer__slice-text {
-	display: none;
-}*/
 
 /* Основной текст (всегда виден) */
 .footer__slice-text__base {
@@ -1387,11 +1382,9 @@ button:focus-visible {
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
-	/* Каждая полоса показывает только свой узкий срез */
 	clip-path: inset(
 		-15%
 		0 
-		/*calc(var(--i) * (100% / var(--slices)))*//*calc((var(--slices) - var(--i) + 2.4) * (100% / var(--slices))) */
 		calc(85% - (var(--i) / 3 * 1.9%))
 		0
 	);
@@ -1489,14 +1482,7 @@ button:focus-visible {
 		font-size: 16px;
 		line-height: 1;
 	}
-	/*
-	.footer__slice-text {
-		display: block;
-	}
-	.footer__slice-text-mobile {
-		display: none;
-	}
-	*/
+
 	.footer__content {
 		margin-bottom: 155px;
 	}
