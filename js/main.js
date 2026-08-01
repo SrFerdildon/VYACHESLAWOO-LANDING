@@ -100,29 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		observer.observe(text);
 	});
 
-
-	// ===== АНИМАЦИЯ СЕКЦИИ SERVICES =====
-	// Анимация с привязкой к скроллу
-	gsap.registerPlugin(ScrollTrigger);
-
-	const scrollAnimation = document.querySelectorAll('.services__item, .services__header');
-
-	gsap.utils.toArray(scrollAnimation).forEach((item, index) => {
-		gsap.to(item, {
-			scrollTrigger: {
-				trigger: item,
-				start: 'top 100%',
-				/*end: 'bottom 20%',*/
-				toggleActions: 'play none none reverse',
-			},
-			y: 0,
-			scale: 1,
-			duration: 1.5,
-			delay: 0.1,
-			ease: 'power3.out',
-		});
-	});
-
 	// ===== АНИМАЦИЯ СЕКЦИИ STAGES =====
 	const stagesSection = document.querySelector('.stages');
 	const stagesReveal = document.querySelector('.stages__reveal');

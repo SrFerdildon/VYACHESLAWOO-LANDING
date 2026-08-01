@@ -764,6 +764,10 @@ button:focus-visible {
 	}
 }
 @media (min-width: 1000px) {
+	.portfolio {
+		padding-bottom: 120px;
+	}
+
 	.portfolio__header {
 		font-size: 20px;
 	}
@@ -851,12 +855,14 @@ button:focus-visible {
 	text-transform: uppercase;
 	min-height: 100vh;
 	min-height: 100dvh;
+	padding-bottom: 60px;
 }
 
 .services__wrapper {
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	gap: 12px;
 }
 
 .services__item {
@@ -868,10 +874,7 @@ button:focus-visible {
 	align-items: flex-start;
 	gap: 16px;
 	line-height: 1;
-	position: sticky;
 	background-color: var(--color-black);
-	z-index: 1;
-	transform: translateY(50px);
 }
 
 .services__header {
@@ -880,41 +883,8 @@ button:focus-visible {
 	font-size: 16px;
 	font-weight: 200;
 	line-height: 1;
-	position: sticky;
-	z-index: 0;
-	top: 20px;
 	background-color: var(--color-black);
-	margin-bottom: 1000px;
-}
-
-.services__item:nth-child(2) {
-	z-index: 2;
-	top: 50px;
-	margin-bottom: 865px;
-}
-
-.services__item:nth-child(3) {
-	z-index: 3;
-	top: 95px;
-	margin-bottom: 780px;
-}
-
-.services__item:nth-child(4) {
-	z-index: 4;
-	top: 145px;
-	margin-bottom: 755px;
-}
-
-.services__item:nth-child(5) {
-	z-index: 5;
-	top: 190px;
-	margin-bottom: 695px;
-}
-
-.services__item:nth-child(6) {
-	z-index: 6;
-	top: 235px;
-	margin-bottom: 660px;
+	padding-bottom: 15px;
 }
 
 .services__item-header,
@@ -927,7 +897,6 @@ button:focus-visible {
 	font-size: 12px;
 	font-weight: 200;
 	opacity: 80%;
-	max-width: 300px;
 }
 
 .services__item-bottom {
@@ -937,6 +906,14 @@ button:focus-visible {
 }
 
 @media (min-width: 640px) {
+	.services__wrapper {
+		gap: 22px;
+	}
+
+	.servises__header {
+		padding-bottom: 20px
+	}
+
 	.services__item {
 		align-items: center;
 		text-align: center;
@@ -944,68 +921,27 @@ button:focus-visible {
 	}
 	.services__item-main {
 		font-size: 16px;
-		max-width: 600px;
-	}
-
-	.services__header {
-		margin-bottom: 955px;
-	}
-
-	.services__item:nth-child(2) {
-		margin-bottom: 855px;
-	}
-
-	.services__item:nth-child(3) {
-		margin-bottom: 795px;
-	}
-
-	.services__item:nth-child(4) {
-		margin-bottom: 745px;
-	}
-
-	.services__item:nth-child(5) {
-		margin-bottom: 695px;
-	}
-
-	.services__item:nth-child(6) {
-		margin-bottom: 660px;
 	}
 }
 @media (min-width: 1000px) {
-	.services__item-main {
-		max-width: 900px;
-	}
-
-	.services__header {
-		margin-bottom: 950px;
-	}
-
-	.services__item:nth-child(2) {
-		margin-bottom: 860px;
-	}
-
-	.services__item:nth-child(3) {
-		margin-bottom: 810px;
-	}
-
-	.services__item:nth-child(4) {
-		margin-bottom: 760px;
-	}
-
-	.services__item:nth-child(5) {
-		margin-bottom: 710px;
-	}
-
-	.services__item:nth-child(6) {
-		margin-bottom: 660px;
+	.services {
+		padding-bottom: 120px;
 	}
 }
 @media (min-width: 1500px) {
+	.services {
+		padding-bottom: 140px;
+	}
+
 	.services__header {
 		font-size: 20px;
-		top: 30px;
-		margin-bottom: 1300px;
+		padding-bottom: 30px;
 	}
+
+	.services__wrapper {
+		gap: 30px;
+	}
+
 	.services__item-header,
 	.services__item-bottom {
 		font-size: 20px;
@@ -1031,73 +967,11 @@ button:focus-visible {
 		justify-content: flex-end;
 		gap: 60px;
 	}
-
-	.services__item:nth-child(2) {
-		top: 80px;
-		margin-bottom: 1160px;
-	}
-
-	.services__item:nth-child(3) {
-		top: 180px;
-		margin-bottom: 1040px;
-	}
-
-	.services__item:nth-child(4) {
-		top: 295px;
-		margin-bottom: 920px;
-	}
-
-	.services__item:nth-child(5) {
-		top: 410px;
-		margin-bottom: 800px;
-	}
-
-	.services__item:nth-child(6) {
-		top: 600px;
-		margin-bottom: 700px;
-	}
 }
+
 @media (min-width: 1870px) {
-	.services__item-bottom {
-		gap: 150px;
-	}
-		
-	.services__item-header {
-		min-width: 33%;
-	}
-
-	.services__item-main {
-		max-width: 680px;
-	}
-
-	.services__header {
-		top: 50px;
-		margin-bottom: 1285px;
-	}
-
-	.services__item:nth-child(2) {
-		top: 100px;
-		margin-bottom: 1165px;
-	}
-
-	.services__item:nth-child(3) {
-		top: 200px;
-		margin-bottom: 1065px;
-	}
-
-	.services__item:nth-child(4) {
-		top: 305px;
-		margin-bottom: 965px;
-	}
-
-	.services__item:nth-child(5) {
-		top: 410px;
-		margin-bottom: 865px;
-	}
-
-	.services__item:nth-child(6) {
-		top: 600px;
-		margin-bottom: 760px;
+	.services {
+		padding-bottom: 160px;
 	}
 }
 
