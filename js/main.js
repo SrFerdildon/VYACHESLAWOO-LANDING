@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				end: () => `+=${Math.abs(getScrollAmount()) * 2}`, // Длина = ширина трека + 500px на раскрытие круга
 				pin: true, // Приклеиваем секцию
 				pinSpacing: true,
-				scrub: 2, // Плавная привязка к скроллу
+				scrub: 1.3, // Плавная привязка к скроллу
 				invalidateOnRefresh: true,
 				anticipatePin: 1,
 			}
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		stagesTl.to(stagesTrack, {
 			x: getScrollAmount,
 			ease: 'none',
-			duration: 3,
+			duration: 10,
 		}, '+=0');
 	}
 
