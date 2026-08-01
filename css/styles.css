@@ -1341,7 +1341,7 @@ button:focus-visible {
 }
 
 .footer__content {
-	margin-bottom: 30px;
+	margin-bottom: 100px;
 }
 
 .footer__rights,
@@ -1365,9 +1365,9 @@ button:focus-visible {
 	pointer-events: none;
 }
 
-.footer__slice-text {
+/*.footer__slice-text {
 	display: none;
-}
+}*/
 
 /* Основной текст (всегда виден) */
 .footer__slice-text__base {
@@ -1434,7 +1434,7 @@ button:focus-visible {
 	}
 
 	.footer__content {
-		margin-bottom: 40px;
+		margin-bottom: 140px;
 	}
 }
 
