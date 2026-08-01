@@ -142,25 +142,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// ===== АНИМАЦИЯ СЕКЦИИ FOOTER =====
 	// Анимация с привязкой к скроллу
-	gsap.registerPlugin(ScrollTrigger);
+	function updateFooterViewBox() {
+		const svgElements = document.querySelectorAll('.footer__svg');
+		const scrollAnimation = document.querySelector('.footer__img-container');
 
-	const scrollAnimation = document.querySelectorAll('.services__item, .services__header');
+		if (!svgElements.length) return; // Проверяем, что элементы найдены
 
-	gsap.utils.toArray(scrollAnimation).forEach((item, index) => {
-		gsap.to(item, {
-			scrollTrigger: {
-				trigger: item,
-				start: 'top 100%',
-				/*end: 'bottom 20%',*/
-				toggleActions: 'play none none reverse',
-			},
-			y: 0,
-			scale: 1,
-			duration: 1.5,
-			delay: 0.1,
-			ease: 'power3.out',
+		const viewportWidth = window.innerWidth;
+		const baseWidth = 1799;
+		const baseHeight = 299;
+
+		// Вычисляем относительную высоту (10% от оригинала)
+
+		// Или обрезать снизу на 20%
+		const offsetY = baseHeight * 0;
+		const visibleHeight = baseHeight * 10;
+
+		gsap.utils.toArray(svgElements).forEach((item, index) => {
+			const relativeHeight = baseHeight / 100 * (2 + index);
+			if (index < svgElements.length - 1) {
+				item.setAttribute('viewBox', `0 ${offsetY} ${baseWidth} ${relativeHeight}`);
+			} else {
+				item.setAttribute('viewBox', `0 0 ${baseWidth} ${baseHeight}`);
+			}
+
+			item.style.zIndex = index;
+			let translateYValue = relativeHeight * index / 8;
+			let temp = -100 * index;
+			/*item.style.transform = `translateY(${translateYValue}px)`;*/
+			item.style.bottom = `${temp}px)`;
+			gsap.to(item, {
+				scrollTrigger: {
+					trigger: scrollAnimation,
+					start: 'top 40%',
+					end: 'bottom 30%',
+					toggleActions: 'play none none reverse',
+				},
+				y: 0,
+				duration: 0.3,
+				delay: 0.1,
+				ease: 'power2.out',
+			});
 		});
-	});
+	}
+
+	window.addEventListener('load', updateFooterViewBox);
+	window.addEventListener('resize', updateFooterViewBox);
+
 
 
 	// ===== КНОПКА "НАВЕРХ" =====

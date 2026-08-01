@@ -1017,7 +1017,7 @@ button:focus-visible {
 	position: absolute;
 	top: 50%;
 	left: 100%;
-	transform: translate(0%, -50%);
+	transform: translate(50%, -50%);
 	height: 100vh;
 	display: flex;
 	flex-direction: row;
@@ -1176,6 +1176,7 @@ button:focus-visible {
 	background-color: var(--color-white);
 	color: var(--color-black);
 	padding-top: 40px;
+	padding-bottom: 20px;
 	text-transform: uppercase;
 	overflow: hidden;
 }
@@ -1216,7 +1217,7 @@ button:focus-visible {
 }
 
 .footer__content {
-	margin-bottom: 100px;
+	margin-bottom: 30px;
 }
 
 .footer__rights,
@@ -1228,59 +1229,15 @@ button:focus-visible {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 0.5em;
+	padding-bottom: 20px;
 }
 
-.footer__img {
-	width: 100%;
-	pointer-events: none;
+.footer__svg {
+
+	position: sticky;
+	bottom: 400px;
 }
 
-.footer__img:nth-of-type(1) {
-	transform: translateY(180%);
-	clip-path: inset(0 0 90% 0);
-}
-
-.footer__img:nth-of-type(2) {
-	transform: translateY(88%);
-	clip-path: inset(0 0 88% 0);
-}
-
-
-
-
-/* Контейнер для анимации */
-.footer__slice-svg {
-	width: 100%;
-	overflow: visible;
-	margin-top: 40px;
-}
-
-.slice-svg {
-	width: 100%;
-	height: auto;
-	display: block;
-	overflow: visible;
-}
-
-.slice-svg__base {
-	font-family: var(--font-title);
-	font-size: 200px;
-	font-weight: 400;
-	fill: var(--color-black);
-	text-transform: uppercase;
-	letter-spacing: 2px;
-}
-
-.slice-svg__stripe {
-	font-family: var(--font-title);
-	font-size: 200px;
-	font-weight: 400;
-	fill: var(--color-black);
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	opacity: 0;
-}
 
 @media (min-width: 640px) {
 	.footer {
@@ -1291,7 +1248,6 @@ button:focus-visible {
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
-		margin-bottom: 100px;
 	}
 
 	.footer__line {
@@ -1313,10 +1269,6 @@ button:focus-visible {
 		gap: 15px;
 		font-size: 16px;
 		padding-bottom: 0px;
-	}
-
-	.footer__content {
-		margin-bottom: 140px;
 	}
 }
 
@@ -1371,25 +1323,19 @@ button:focus-visible {
 		font-size: 16px;
 		line-height: 1;
 	}
-
-	.footer__content {
-		margin-bottom: 155px;
-	}
 }
+
 @media (min-width: 1500px) {
 	.footer {
 		padding-top: 80px;
+		padding-bottom: 70px;
 	}
 
 	.footer__content {
-		margin-bottom: 220px;
+		margin-bottom: 80px;
 	}
 }
-@media (min-width: 1870px) {
-	.footer__content {
-		margin-bottom: 280px;
-	}
-}
+
 
 /* ===== КНОПКА "НАВЕРХ" ===== */
 .scroll-top {
