@@ -102,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// ===== АНИМАЦИЯ СЕКЦИИ STAGES =====
 	const stagesSection = document.querySelector('.stages');
-	const stagesReveal = document.querySelector('.stages__reveal');
 	const stagesWrapper = document.querySelector('.stages__wrapper');
 	const stagesTrack = document.querySelector('.stages__track');
 	const stagesHeader = document.querySelector('.stages__header');
@@ -110,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (stagesSection && stagesTrack) {
 		// Вычисляем длину горизонтального скролла
 		const getScrollAmount = () => {
-			return -(stagesTrack.scrollWidth);
+			return -(stagesTrack.scrollWidth + window.innerWidth / 2);
 		};
 
 		// Создаем ЕДИНЫЙ timeline для всей секции
@@ -127,87 +126,42 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 
-		// 1. Сначала раскрываем круг
-		stagesTl.to(stagesReveal, {
-			clipPath: 'circle(100% at 50% 50%)',
-			duration: 7,
-			ease: 'power2.inOut',
-		});
-
 		stagesTl.to(stagesWrapper, {
 			clipPath: 'circle(100% at 50% 50%)',
 			duration: 7,
 			ease: 'power2.inOut',
 		}, 0);
 
-		// 2. Начинаем двигать карточки
 		stagesTl.to(stagesTrack, {
 			x: getScrollAmount,
 			ease: 'none',
 			duration: 10,
-		}, '+=0');
+		}, 0);
 	}
 
 
 	// ===== АНИМАЦИЯ СЕКЦИИ FOOTER =====
-	function createFooterSliceTrail(selector, slicesCount = 25) {
-		const container = document.querySelector(selector);
-		if (!container) return;
+	// Анимация с привязкой к скроллу
+	gsap.registerPlugin(ScrollTrigger);
 
-		const text = container.dataset.text;
-		container.style.setProperty('--slices', slicesCount);
+	const scrollAnimation = document.querySelectorAll('.services__item, .services__header');
 
-		// Создаем основной текст
-		const baseText = document.createElement('div');
-		baseText.className = 'footer__slice-text__base';
-		baseText.textContent = text;
-		container.appendChild(baseText);
-		const offsets = [];
-		let total = 0;
-		// Создаем полосы
-		for (let i = 0; i < slicesCount; i++) {
-			const slice = document.createElement('div');
-			slice.className = 'footer__slice-text__slice';
-			slice.textContent = text;
-
-			offsets.push(total);
-
-			const visibleHeight = 21 - (i / 3 * 1.9);
-			total += visibleHeight;
-
-			// Подставляем готовый polygon
-			const clipValue = `polygon(0% 0%, 100% 0%, 100% ${visibleHeight}%, 0% ${visibleHeight}%)`;
-			slice.style.clipPath = clipValue;
-			slice.style.webkitClipPath = clipValue;
-
-			container.appendChild(slice);
-		}
-
-		const slices = container.querySelectorAll('.footer__slice-text__slice');
-		const footer = container.querySelector('.footer');
-		gsap.set(slices, { opacity: 1, y: 0 });
-		const heightSelector = gsap.getProperty(selector, 'height') / 100;
-		gsap.to(slices, {
-			opacity: 1,
-			y: i => -offsets[i] * container.offsetHeight / 300,
-			duration: 1,
-			stagger: {
-				each: 0.05,
-				from: 'start'
-			},
-			ease: 'power2.out',
+	gsap.utils.toArray(scrollAnimation).forEach((item, index) => {
+		gsap.to(item, {
 			scrollTrigger: {
-				trigger: selector,
+				trigger: item,
 				start: 'top 100%',
-				end: 'bottom 150%',
-				scrub: 3,
+				/*end: 'bottom 20%',*/
 				toggleActions: 'play none none reverse',
 			},
+			y: 0,
+			scale: 1,
+			duration: 1.5,
+			delay: 0.1,
+			ease: 'power3.out',
 		});
-	}
+	});
 
-	// Запуск анимации для футера
-	createFooterSliceTrail('.footer__slice-text', 9);
 
 	// ===== КНОПКА "НАВЕРХ" =====
 	const scrollTopBtn = document.getElementById('scrollTop');

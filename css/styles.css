@@ -987,18 +987,6 @@ button:focus-visible {
 	border-bottom: 1px solid #777777;
 }
 
-.stages__reveal {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 100%;
-	height: 100vh;
-	background-color: var(--color-white);
-	clip-path: circle(0% at 50% 50%);
-	z-index: 1;
-}
-
 .stages__header {
 	text-align: center;
 	position: absolute;
@@ -1019,6 +1007,7 @@ button:focus-visible {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	clip-path: circle(0% at 50% 50%);
+		background-color: var(--color-white);
 	height: 100vh;
 	z-index: 1;
 	width: 100%;
@@ -1027,7 +1016,7 @@ button:focus-visible {
 .stages__track {
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 100%;
 	transform: translate(0%, -50%);
 	height: 100vh;
 	display: flex;
@@ -1042,7 +1031,6 @@ button:focus-visible {
 .stages__card {
 	width: 229px;
 	height: 300px;
-	backdrop-filter: blur(15px);
 	background: rgba(255, 255, 255, 0.4);
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 8px;
@@ -1052,6 +1040,8 @@ button:focus-visible {
 	justify-content: space-between;
 	flex-shrink: 0;
 	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
 	transition: var(--transition-slow);
 }
 
@@ -1234,39 +1224,62 @@ button:focus-visible {
 	display: none;
 }
 
-/* Контейнер для анимации */
-.footer__slice-text {
-	display: block;
-	position: relative;
-	font-family: var(--font-title);
-	font-size: clamp(68px, 20vw, 401px);
-	white-space: nowrap;
-	letter-spacing: 1;
-	text-align: center;
-	color: var(--color-black);
-	height: 1em;
-	line-height: 1;
-	pointer-events: none;
+.footer__img-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5em;
 }
 
-/* Основной текст (всегда виден) */
-.footer__slice-text__base {
-	position: absolute;
-	top: 0;
-	left: 0;
+.footer__img {
 	width: 100%;
-	height: 100%;
-	z-index: 1;
+	pointer-events: none;
 }
 
-/* Полосы-следы */
-.footer__slice-text__slice {
-	position: absolute;
-	inset: 0;
-	pointer-events: none;
-	will-change: transform;
+.footer__img:nth-of-type(1) {
+	transform: translateY(180%);
+	clip-path: inset(0 0 90% 0);
+}
+
+.footer__img:nth-of-type(2) {
+	transform: translateY(88%);
+	clip-path: inset(0 0 88% 0);
+}
+
+
+
+
+/* Контейнер для анимации */
+.footer__slice-svg {
+	width: 100%;
+	overflow: visible;
+	margin-top: 40px;
+}
+
+.slice-svg {
+	width: 100%;
+	height: auto;
+	display: block;
+	overflow: visible;
+}
+
+.slice-svg__base {
+	font-family: var(--font-title);
+	font-size: 200px;
+	font-weight: 400;
+	fill: var(--color-black);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.slice-svg__stripe {
+	font-family: var(--font-title);
+	font-size: 200px;
+	font-weight: 400;
+	fill: var(--color-black);
+	text-transform: uppercase;
+	letter-spacing: 2px;
 	opacity: 0;
-	z-index: 10;
 }
 
 @media (min-width: 640px) {
