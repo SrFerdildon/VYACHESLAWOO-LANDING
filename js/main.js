@@ -184,7 +184,15 @@ document.addEventListener('DOMContentLoaded', () => {
 			const slice = document.createElement('div');
 			slice.className = 'footer__slice-text__slice';
 			slice.textContent = text;
-			slice.style.setProperty('--i', i);
+
+			// Вычисляем значение БЕЗ calc()
+			const visibleHeight = 21 - (i / 3 * 1.9);
+
+			// Подставляем готовый polygon
+			const clipValue = `polygon(0% 0%, 100% 0%, 100% ${visibleHeight}%, 0% ${visibleHeight}%)`;
+			slice.style.clipPath = clipValue;
+			slice.style.webkitClipPath = clipValue;
+
 			container.appendChild(slice);
 		}
 
@@ -194,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const heightSelector = gsap.getProperty(selector, 'height') / 100;
 		gsap.to(slices, {
 			opacity: 1,
-			y: (i) => -(heightSelector * 8) - i / 1.4 * (heightSelector * 10),
+			y: (i) => -(heightSelector * 8) - i * (heightSelector * 7),
 			duration: 1,
 			stagger: {
 				each: 0.05,
