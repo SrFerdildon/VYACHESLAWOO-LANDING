@@ -162,15 +162,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		baseText.className = 'footer__slice-text__base';
 		baseText.textContent = text;
 		container.appendChild(baseText);
-
+		const offsets = [];
+		let total = 0;
 		// Создаем полосы
 		for (let i = 0; i < slicesCount; i++) {
 			const slice = document.createElement('div');
 			slice.className = 'footer__slice-text__slice';
 			slice.textContent = text;
 
-			// Вычисляем значение БЕЗ calc()
+			offsets.push(total);
+
 			const visibleHeight = 21 - (i / 3 * 1.9);
+			total += visibleHeight;
 
 			// Подставляем готовый polygon
 			const clipValue = `polygon(0% 0%, 100% 0%, 100% ${visibleHeight}%, 0% ${visibleHeight}%)`;
@@ -186,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const heightSelector = gsap.getProperty(selector, 'height') / 100;
 		gsap.to(slices, {
 			opacity: 1,
-			y: (i) => -(heightSelector * 8) - i * (heightSelector * 7),
+			y: i => -offsets[i] * container.offsetHeight / 300,
 			duration: 1,
 			stagger: {
 				each: 0.05,
