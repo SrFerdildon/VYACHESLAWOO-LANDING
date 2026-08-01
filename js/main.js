@@ -103,13 +103,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	// ===== АНИМАЦИЯ СЕКЦИИ STAGES =====
 	const stagesSection = document.querySelector('.stages');
 	const stagesReveal = document.querySelector('.stages__reveal');
-	const stagesTrack = document.querySelector('.stages__wrapper');
+	const stagesWrapper = document.querySelector('.stages__wrapper');
+	const stagesTrack = document.querySelector('.stages__track');
 	const stagesHeader = document.querySelector('.stages__header');
 
 	if (stagesSection && stagesTrack) {
 		// Вычисляем длину горизонтального скролла
 		const getScrollAmount = () => {
-			return -(stagesTrack.scrollWidth + window.innerWidth * 1.5);
+			return -(stagesTrack.scrollWidth);
 		};
 
 		// Создаем ЕДИНЫЙ timeline для всей секции
@@ -128,10 +129,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// 1. Сначала раскрываем круг
 		stagesTl.to(stagesReveal, {
-			clipPath: 'circle(150% at 50% 50%)',
-			duration: 5,
+			clipPath: 'circle(100% at 50% 50%)',
+			duration: 7,
 			ease: 'power2.inOut',
 		});
+
+		stagesTl.to(stagesWrapper, {
+			clipPath: 'circle(100% at 50% 50%)',
+			duration: 7,
+			ease: 'power2.inOut',
+		}, 0);
 
 		// 2. Начинаем двигать карточки
 		stagesTl.to(stagesTrack, {
