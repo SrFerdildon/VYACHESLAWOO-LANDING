@@ -234,4 +234,26 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 	}
+
+
+	const scrollBurgerBtn = document.getElementById('burger-btn');
+
+	if (scrollBurgerBtn) {
+		// Показываем/скрываем кнопку при скролле
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 400) { // Показываем после 400px прокрутки
+				scrollBurgerBtn.classList.add('burger-btn--visible');
+			} else {
+				scrollBurgerBtn.classList.remove('burger-btn--visible');
+			}
+		});
+
+		// Плавная прокрутка наверх при клике
+		scrollBurgerBtn.addEventListener('click', () => {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		});
+	}
 });
