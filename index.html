@@ -58,7 +58,7 @@
 
 		<div class="container header__container">
 			<!-- Логотип -->
-			<a href="#" class="logo">
+			<a href="/" class="logo" aria-label="На главную">
 				<picture>
 					<source media="(max-width: 639px)" srcset="images/icons/logo-320.svg">
 					<source media="(min-width: 640px) and (max-width: 999px)" srcset="images/icons/logo-640.svg">
@@ -68,7 +68,7 @@
 			</a>
 
 			<!-- Навигация (одна для всех устройств) -->
-			<nav class="nav" id="nav">
+			<nav class="nav" id="nav" aria-label="Главная навигация">
 				<div class="nav__wrapper">
 					<ul class="nav__list">
 						<li class="nav__item"><a href="#about" class="nav__link underlinemod">ОБО МНЕ</a></li>
@@ -152,7 +152,7 @@
 		<section class="portfolio container" id="portfolio">
 			<h2 class="portfolio__header">Портфолио</h2>
 			<div class="portfolio__wrapper">
-				<div class="portfolio__item">
+				<article class="portfolio__item">
 					<a href="https://dprofile.ru/case/150925/nova-e-commerce" target="_blank" rel="noopener noreferrer"
 						class="portfolio__item-image underlinemod">
 						<img src="images/content/nova.webp" loading="lazy" decoding="async"
@@ -160,7 +160,7 @@
 					</a>
 					<div class="portfolio__item-bottom">
 						<div class="portfolio__item-left">
-							<p>Nova</p>
+							<h3>Nova</h3>
 							<a href="https://dprofile.ru/case/150925/nova-e-commerce" target="_blank"
 								rel="noopener noreferrer" class="portfolio__dropfile underlinemod">
 								<p>Dropfile</p>
@@ -172,8 +172,8 @@
 							<p class="portfolio__tag">Taptop</p>
 						</div>
 					</div>
-				</div>
-				<div class="portfolio__item">
+				</article>
+				<article class="portfolio__item">
 					<a href="https://dprofile.ru/case/144625/future-bank-mobile-app" target="_blank"
 						rel="noopener noreferrer" class="portfolio__item-image underlinemod">
 						<img src="images/content/future.webp" loading="lazy" decoding="async"
@@ -192,8 +192,8 @@
 							<p class="portfolio__tag">Дизайн</p>
 						</div>
 					</div>
-				</div>
-				<div class="portfolio__item">
+				</article>
+				<article class="portfolio__item">
 					<a href="https://dprofile.ru/case/141390/olyaart" target="_blank" rel="noopener noreferrer"
 						class="portfolio__item-image underlinemod">
 						<img src="images/content/olya.art.webp" loading="lazy" decoding="async"
@@ -213,8 +213,8 @@
 							<p class="portfolio__tag">Taptop</p>
 						</div>
 					</div>
-				</div>
-				<div class="portfolio__item">
+				</article>
+				<article class="portfolio__item">
 					<a href="https://dprofile.ru/case/98176/hut-arenda-domikov-u-ozera" target="_blank"
 						rel="noopener noreferrer" class="portfolio__item-image underlinemod">
 						<img src="images/content/hut.webp" loading="lazy" decoding="async"
@@ -234,7 +234,7 @@
 							<p class="portfolio__tag">Taptop</p>
 						</div>
 					</div>
-				</div>
+				</article>
 				<a href="https://dprofile.ru/vycheslawoo" target="_blank" rel="noopener noreferrer"
 					class="portfolio__all-small underlinemod">Все
 					проекты</a>
@@ -245,9 +245,9 @@
 		<!-- Услуги -->
 		<section class="services container" id="services">
 			<h2 class="services__header">Услуги</h2>
-			<div class="services__wrapper">
-				<a href="https://t.me/Vycheslawoo" target="_blank" rel="noopener noreferrer">
-					<div class="services__item">
+			<ul class="services__wrapper">
+				<li>
+					<a href="https://t.me/Vycheslawoo" target="_blank" rel="noopener noreferrer" class="services__item">
 						<h3 class="services__item-header">Одностраничный сайт</h3>
 						<p class="services__item-main">Одностраничный сайт, где всё работает как единое целое: от смысла
 							и
@@ -257,10 +257,10 @@
 							<span class="services__item-period">от 2-4 недель</span>
 							<span class="services__item-price">от 40 000 ₽</span>
 						</div>
-					</div>
-				</a>
-				<a href="https://t.me/Vycheslawoo" target="_blank" rel="noopener noreferrer">
-					<div class="services__item">
+					</a>
+				</li>
+				<li>
+					<a href="https://t.me/Vycheslawoo" target="_blank" rel="noopener noreferrer" class="services__item">
 						<h3 class="services__item-header">Корпоративный сайт</h3>
 						<p class="services__item-main">Корпоративный сайт, где каждый раздел и каждый элемент работает
 							на
@@ -273,10 +273,10 @@
 							<span class="services__item-period">от 3-8 недель</span>
 							<span class="services__item-price">от 80 000 ₽</span>
 						</div>
-					</div>
-				</a>
-				<a href="https://t.me/Vycheslawoo" target="_blank" rel="noopener noreferrer">
-					<div class="services__item">
+					</a>
+				</li>
+				<li>
+					<a href="https://t.me/Vycheslawoo" target="_blank" rel="noopener noreferrer" class="services__item">
 						<h3 class="services__item-header">Интернет магазин</h3>
 						<p class="services__item-main">Интернет-магазин, который продаёт не только товары, но и эмоции.
 							Продуманная структура, удобная навигация и
@@ -286,10 +286,10 @@
 							<span class="services__item-period">от 3-8 недель</span>
 							<span class="services__item-price">от 110 000 ₽</span>
 						</div>
-					</div>
-				</a>
-				<a href="https://t.me/Vycheslawoo" target="_blank" rel="noopener noreferrer">
-					<div class="services__item">
+					</a>
+				</li>
+				<li>
+					<a href="https://t.me/Vycheslawoo" target="_blank" rel="noopener noreferrer" class="services__item">
 						<h3 class="services__item-header">MVP приложения</h3>
 						<p class="services__item-main">MVP-приложение, которое с первых экранов демонстрирует ценность
 							продукта. Чистый и продуманный интерфейс, логичная
@@ -300,10 +300,10 @@
 							<span class="services__item-period">от 3-8 недель</span>
 							<span class="services__item-price">от 40 000 ₽</span>
 						</div>
-					</div>
-				</a>
-				<a href="https://t.me/Vycheslawoo" target="_blank" rel="noopener noreferrer">
-					<div class="services__item">
+					</a>
+				</li>
+				<li>
+					<a href="https://t.me/Vycheslawoo" target="_blank" rel="noopener noreferrer" class="services__item">
 						<h3 class="services__item-header">Часовая ставка / консультация</h3>
 						<p class="services__item-main">Экспертная консультация и сопровождение вашего проекта.
 							Поддерживаю
@@ -313,136 +313,136 @@
 							<span class="services__item-period"></span>
 							<span class="services__item-price">1 час / 800 ₽</span>
 						</div>
-					</div>
-				</a>
-			</div>
+					</a>
+				</li>
+			</ul>
 		</section>
 		<!-- Этапы -->
 		<section class="stages" id="stages">
 			<div class="stages__wrapper">
 				<h2 class="stages__header">Этапы</h2>
-				<div class="stages__track">
-					<div class="stages__card">
+				<ul class="stages__track">
+					<li class="stages__card">
 						<h3 class="stages__card-header">Старт проекта</h3>
 						<span class="stages__card-number">[001]</span>
-						<div class="stages__card-content">
-							<div class="stages__card-line">
+						<ul class="stages__card-content">
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Бриф</p>
-							</div>
-							<div class="stages__card-line">
+							</li>
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Коммерческое предложение</p>
-							</div>
-							<div class="stages__card-line">
+							</li>
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Подписание договора</p>
-							</div>
-						</div>
-					</div>
-					<div class="stages__card">
+							</li>
+						</ul>
+					</li>
+					<li class="stages__card">
 						<h3 class="stages__card-header">Проектирование</h3>
 						<span class="stages__card-number">[002]</span>
-						<div class="stages__card-content">
-							<div class="stages__card-line">
+						<ul class="stages__card-content">
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Анализ конкурентов</p>
-							</div>
-							<div class="stages__card-line">
+							</li>
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Коммерческое предложение</p>
-							</div>
-							<div class="stages__card-line">
+							</li>
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Написание текста или корректировка вашего</p>
-							</div>
-							<div class="stages__card-line">
+							</li>
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Создание прототипа</p>
-							</div>
-						</div>
-					</div>
-					<div class="stages__card">
+							</li>
+						</ul>
+					</li>
+					<li class="stages__card">
 						<h3 class="stages__card-header">Дизайн-концепция</h3>
 						<span class="stages__card-number">[003]</span>
-						<div class="stages__card-content">
-							<div class="stages__card-line">
+						<ul class="stages__card-content">
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Подбор референсов</p>
-							</div>
-							<div class="stages__card-line">
+							</li>
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Создание мудборда</p>
-							</div>
-							<div class="stages__card-line">
+							</li>
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Поиск функциональных решений</p>
-							</div>
-							<div class="stages__card-line">
+							</li>
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Дизайн-концепция главной страницы</p>
-							</div>
-						</div>
-					</div>
-					<div class="stages__card">
+							</li>
+						</ul>
+					</li>
+					<li class="stages__card">
 						<h3 class="stages__card-header">Дизайн и адаптив</h3>
 						<span class="stages__card-number">[004]</span>
-						<div class="stages__card-content">
-							<div class="stages__card-line">
+						<ul class="stages__card-content">
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Детальная проработка всех страниц</p>
-							</div>
-							<div class="stages__card-line">
+							</li>
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Планшетная и мобильная адаптация</p>
-							</div>
-							<div class="stages__card-line">
+							</li>
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Интерактивный прототип</p>
-							</div>
-						</div>
-					</div>
-					<div class="stages__card">
+							</li>
+						</ul>
+					</li>
+					<li class="stages__card">
 						<h3 class="stages__card-header">Дизайн и адаптив</h3>
 						<span class="stages__card-number">[005]</span>
-						<div class="stages__card-content">
-							<div class="stages__card-line">
+						<ul class="stages__card-content">
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Верстка всех страниц</p>
-							</div>
-							<div class="stages__card-line">
+							</li>
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Адаптация под все экраны</p>
-							</div>
-							<div class="stages__card-line">
+							</li>
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Анимации и микро-взаимодействия</p>
-							</div>
-							<div class="stages__card-line">
+							</li>
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Настройка сайта</p>
-							</div>
-							<div class="stages__card-line">
+							</li>
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Базовая настройка SEO</p>
-							</div>
-						</div>
-					</div>
-					<div class="stages__card">
+							</li>
+						</ul>
+					</li>
+					<li class="stages__card">
 						<h3 class="stages__card-header">Поддержка</h3>
 						<span class="stages__card-number">[006]</span>
-						<div class="stages__card-content">
-							<div class="stages__card-line">
+						<ul class="stages__card-content">
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>Записываем короткие видео для самостоятельного редактирования</p>
-							</div>
-							<div class="stages__card-line">
+							</li>
+							<li class="stages__card-line">
 								<img src="images/icons/stages-icon.svg" alt="#">
 								<p>В течение 1 месяца следим за работой и вносим исправления по мере необходимости</p>
-							</div>
-						</div>
-					</div>
-				</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 		</section>
 	</main>
@@ -459,7 +459,7 @@
 					class="btn footer__btn">ЗАКАЗАТЬ САЙТ</a>
 			</div>
 			<div class="footer__left">
-				<div class="footer__nav-wrapper">
+				<nav class="footer__nav-wrapper" aria-label="Нижняя навигация">
 					<ul class="footer__nav">
 						<li class="footer__nav-item"><a href="#about" class="footer__link">ОБО МНЕ</a></li>
 						<li class="footer__nav-item"><a href="#portfolio" class="footer__link">ПОРТФОЛИО</a></li>
@@ -467,23 +467,23 @@
 						<li class="footer__nav-item"><a href="#stages" class="footer__link">ЭТАПЫ</a></li>
 						<li class="footer__nav-item"><a href="#contacts" class="footer__link">КОНТАКТЫ</a></li>
 					</ul>
-				</div>
-				<div class="footer__location">
+				</nav>
+				<address class="footer__location">
 					<span>ростов-на-дону, россия MSK +3</span>
 					<a href="https://yandex.ru/maps/?ll=39.718813,47.222109&z=19&l=map" class="footer__link"
 						rel="noopener noreferrer" target="_blank">47.222109° N 39.718813°
 						E</a>
-				</div>
+				</address>
 			</div>
 			<div class="footer__right">
-				<div class="footer__links">
-					<a href="https://dprofile.ru/vycheslawoo" target="_blank" rel="noopener noreferrer"
-						class="footer__link">Diprofile</a>
-					<a href="https://www.behance.net/mrdeadok" target="_blank" rel="noopener noreferrer"
-						class="footer__link">Behance</a>
-					<a href="https://t.me/Vycheslawoo" target="_blank" rel="noopener noreferrer"
-						class="footer__link">Telegram</a>
-				</div>
+				<ul class="footer__links">
+					<li><a href="https://dprofile.ru/vycheslawoo" target="_blank" rel="noopener noreferrer"
+							class="footer__link">Diprofile</a></li>
+					<li><a href="https://www.behance.net/mrdeadok" target="_blank" rel="noopener noreferrer"
+							class="footer__link">Behance</a></li>
+					<li><a href="https://t.me/Vycheslawoo" target="_blank" rel="noopener noreferrer"
+							class="footer__link">Telegram</a></li>
+				</ul>
 				<div class="footer__rights">
 					<span>Все права защищены</span>
 					<span>2026</span>
@@ -511,6 +511,26 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 	<script src="js/main.js"></script>
+	<!-- TODO: ЗАМЕНИТЬ АДРЕС ПРИ ПУБЛИКАЦИИ-->
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "Organization",
+	  "name": "Vycheslawoo",
+	  "description": "Дизайн студия. Создание сайтов и интерфейсов.",
+	  "url": "https://твой-домен.ru/",
+	  "address": {
+	    "@type": "PostalAddress",
+	    "addressLocality": "Ростов-на-Дону",
+	    "addressCountry": "RU"
+	  },
+	  "sameAs": [
+	    "https://t.me/Vycheslawoo",
+	    "https://www.behance.net/mrdeadok",
+	    "https://dprofile.ru/vycheslawoo"
+	  ]
+	}
+	</script>
 </body>
 
 </html>

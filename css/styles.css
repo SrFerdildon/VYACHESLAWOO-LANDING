@@ -134,6 +134,11 @@ ol {
 	list-style: none;
 }
 
+address {
+	text-decoration: none;
+	font-style: normal;
+}
+
 *:focus-visible {
 	outline: 2px solid var(--color-red);
 	outline-offset: 2px;
@@ -704,6 +709,12 @@ button:focus-visible {
 	font-weight: 200;
 }
 
+.portfolio__item-left h3 {
+	font-size: 12px;
+	line-height: 1;
+	font-weight: 200;
+}
+
 .portfolio__dropfile {
 	display: flex;
 	align-items: center;
@@ -776,6 +787,10 @@ button:focus-visible {
 		font-size: 16px;
 	}
 
+	.portfolio__item-left h3 {
+		font-size: 16px;
+	}
+
 	.portfolio__dropfile img {
 		width: 12px;
 	}
@@ -798,6 +813,10 @@ button:focus-visible {
 	}
 
 	.portfolio__item-left {
+		font-size: 20px;
+	}
+
+	.portfolio__item-left h3 {
 		font-size: 20px;
 	}
 
