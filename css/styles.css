@@ -1005,9 +1005,11 @@ button:focus-visible {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	will-change: clip-path transform;
+	transform: translateZ(0);
 	transform: translate(-50%, -50%);
 	clip-path: circle(0% at 50% 50%);
-		background-color: var(--color-white);
+	background-color: var(--color-white);
 	height: 100vh;
 	z-index: 1;
 	width: 100%;
@@ -1017,6 +1019,7 @@ button:focus-visible {
 	position: absolute;
 	top: 50%;
 	left: 100%;
+	will-change: transform;
 	transform: translate(50%, -50%);
 	height: 100vh;
 	display: flex;
