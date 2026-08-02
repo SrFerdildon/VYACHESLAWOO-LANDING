@@ -875,6 +875,12 @@ button:focus-visible {
 	gap: 16px;
 	line-height: 1;
 	background-color: var(--color-black);
+	transition: background-color var(--transition-normal);
+}
+
+.services__item:hover {
+	background-color: var(--color-red);
+	transition: background-color var(--transition-normal);
 }
 
 .services__header {
