@@ -8,40 +8,27 @@ const navLinks = document.querySelectorAll('.nav__link');
 // Функция открытия меню
 function openNav() {
 	nav.classList.add('nav--open');
-	burger.setAttribute('aria-expanded', 'true');
-	document.body.style.overflow = 'hidden'; // Блокируем прокрутку
+	document.body.classList.add('lock');
 }
 
-// Функция закрытия меню
 function closeNav() {
 	nav.classList.remove('nav--open');
-	burger.setAttribute('aria-expanded', 'false');
-	document.body.style.overflow = ''; // Возвращаем прокрутку
+	document.body.classList.remove('lock');
 }
 
 // Слушатели событий
-burger.addEventListener('click', openNav);
-navClose.addEventListener('click', closeNav);
+burger.addEventListener('click', (e) => {
+	e.preventDefault();
+	openNav();
+});
 
+navClose.addEventListener('click', (e) => {
+	e.preventDefault();
+	closeNav();
+});
 // Закрываем меню при клике на ссылку
 navLinks.forEach(link => {
 	link.addEventListener('click', closeNav);
-});
-
-// Закрываем меню при клике вне его
-document.addEventListener('click', (e) => {
-	if (nav.classList.contains('nav--open') &&
-		!nav.contains(e.target) &&
-		!burger.contains(e.target)) {
-		closeNav();
-	}
-});
-
-// Закрываем меню при нажатии Escape
-document.addEventListener('keydown', (e) => {
-	if (e.key === 'Escape' && nav.classList.contains('nav--open')) {
-		closeNav();
-	}
 });
 
 // ===== АНИМАЦИЯ СЕКЦИИ FOOTER =====
@@ -309,14 +296,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else {
 				scrollBurgerBtn.classList.remove('burger-btn--visible');
 			}
-		});
-
-		// Плавная прокрутка наверх при клике
-		scrollBurgerBtn.addEventListener('click', () => {
-			window.scrollTo({
-				top: 0,
-				behavior: 'smooth'
-			});
 		});
 	}
 });

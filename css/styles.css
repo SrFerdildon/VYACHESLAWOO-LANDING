@@ -6,6 +6,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 /* Анимация появления вверх */
 @keyframes fadeInUp {
 	from {
@@ -117,6 +118,10 @@ body {
 	padding-right: env(safe-area-inset-right);
 }
 
+body.lock {
+	overflow: hidden;
+}
+
 img {
 	max-width: 100%;
 	height: auto;
@@ -181,7 +186,7 @@ button:focus-visible {
 }
 
 @media (min-width: 640px) {
-	.container{
+	.container {
 		/*max-width: var(--container-width__640);*/
 		padding: 0 var(--container-padding__640);
 	}
@@ -247,12 +252,12 @@ button:focus-visible {
 	background-color: var(--color-black);
 	color: var(--color-white);
 	z-index: 99;
-	
+
 	opacity: 0;
 	visibility: hidden;
 	transform: translateX(100%);
 	transition: all 0.4s ease;
-	
+
 	display: block;
 	padding: 10px;
 }
@@ -273,9 +278,9 @@ button:focus-visible {
 	display: flex;
 	flex-direction: column;
 	align-items: start;
-	gap: 10px;
+	gap: 14px;
 	padding-top: 80px;
-	margin-bottom: 106px;
+	margin-bottom: 80px;
 
 	font-size: 32px;
 	line-height: 1;
@@ -406,7 +411,10 @@ button:focus-visible {
 		color: var(--color-black);
 	}
 
-	.burger-btn, .nav__links, .logo-burger, .nav__close {
+	.burger-btn,
+	.nav__links,
+	.logo-burger,
+	.nav__close {
 		display: none;
 	}
 }
@@ -565,6 +573,7 @@ button:focus-visible {
 		animation-duration: 2.5s;
 		animation-name: fadeInLeft;
 	}
+
 	.about__content-item:nth-of-type(3),
 	.about__content-item:nth-of-type(4) {
 		align-items: end;
@@ -605,6 +614,7 @@ button:focus-visible {
 		line-height: 1.1;
 	}
 }
+
 @media (min-width: 1500px) {
 	.about {
 		padding-top: 140px;
@@ -637,6 +647,7 @@ button:focus-visible {
 		padding-top: 160px;
 		padding-bottom: 160px;
 	}
+
 	.about__header {
 		font-size: 190px;
 	}
@@ -774,6 +785,7 @@ button:focus-visible {
 		grid-column: span 2;
 	}
 }
+
 @media (min-width: 1000px) {
 	.portfolio {
 		padding-bottom: 120px;
@@ -803,6 +815,7 @@ button:focus-visible {
 		font-size: 20px;
 	}
 }
+
 @media (min-width: 1500px) {
 	.portfolio {
 		padding-bottom: 140px;
@@ -835,7 +848,7 @@ button:focus-visible {
 		grid-column: span 3;
 	}
 
-	.portfolio__all-small{
+	.portfolio__all-small {
 		display: none;
 	}
 
@@ -855,20 +868,24 @@ button:focus-visible {
 		opacity: 0;
 		transition: font-size var(--transition-normal);
 	}
+
 	.portfolio__all-big:hover {
 		font-size: 25px;
 	}
+
 	.portfolio__item:nth-child(3),
 	.portfolio__item:nth-child(4),
 	.portfolio__all-big {
 		grid-column: span 2;
 	}
 }
+
 @media (min-width: 1870px) {
 	.portfolio {
 		padding-bottom: 160px;
 	}
 }
+
 /* SERVICES */
 .services {
 	text-transform: uppercase;
@@ -944,15 +961,18 @@ button:focus-visible {
 		text-align: center;
 		gap: 18px;
 	}
+
 	.services__item-main {
 		font-size: 16px;
 	}
 }
+
 @media (min-width: 1000px) {
 	.services {
 		padding-bottom: 120px;
 	}
 }
+
 @media (min-width: 1500px) {
 	.services {
 		padding-bottom: 140px;
@@ -1115,9 +1135,10 @@ button:focus-visible {
 
 @media (min-width: 640px) {
 	.stages__header {
-	font-size: 287px;
+		font-size: 287px;
 	}
 }
+
 @media (min-width: 1000px) {
 	.stages__card {
 		width: 400px;
@@ -1146,6 +1167,7 @@ button:focus-visible {
 		min-width: 15px;
 	}
 }
+
 @media (min-width: 1500px) {
 	.stages__header {
 		font-size: 500px;
