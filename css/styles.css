@@ -1176,9 +1176,9 @@ button:focus-visible {
 	background-color: var(--color-white);
 	color: var(--color-black);
 	padding-top: 40px;
-	padding-bottom: 20px;
 	text-transform: uppercase;
 	overflow: hidden;
+	max-height: max-content;
 }
 
 .footer__line {
@@ -1225,17 +1225,26 @@ button:focus-visible {
 	display: none;
 }
 
-.footer__img-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+/* Анимированный SVG в футере */
+.footer__slice-svg {
+	width: 100%;
+	overflow: visible;
 	padding-bottom: 20px;
+	overflow-x: hidden;
+
 }
 
-.footer__svg {
+.slice-svg {
+	width: 100%;
+	height: auto;
+	display: block;
+	overflow: visible;
+	overflow-x: hidden;
+}
 
-	position: sticky;
-	bottom: 400px;
+.slice-svg__stripe {
+	will-change: transform;
+	overflow-x: hidden;
 }
 
 
@@ -1328,11 +1337,18 @@ button:focus-visible {
 @media (min-width: 1500px) {
 	.footer {
 		padding-top: 80px;
-		padding-bottom: 70px;
 	}
 
 	.footer__content {
 		margin-bottom: 80px;
+	}
+
+	.footer__img-container {
+		height: 900px;
+	}
+
+	.footer__slice-svg {
+		padding-bottom: 50px;
 	}
 }
 
