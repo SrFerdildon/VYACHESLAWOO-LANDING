@@ -642,7 +642,7 @@ button:focus-visible {
 	}
 }
 
-@media (min-width: 1870px) {
+@media (min-width: 1850px) {
 	.about {
 		padding-top: 160px;
 		padding-bottom: 160px;
@@ -880,7 +880,7 @@ button:focus-visible {
 	}
 }
 
-@media (min-width: 1870px) {
+@media (min-width: 1850px) {
 	.portfolio {
 		padding-bottom: 160px;
 	}
@@ -971,6 +971,27 @@ button:focus-visible {
 	.services {
 		padding-bottom: 120px;
 	}
+	
+	.services__item {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	.services__item-header {
+		min-width: 30%;
+	}
+
+	.services__item-main {
+		justify-self: center;
+		max-width: 35%;
+	}
+
+	.services__item-bottom {
+		justify-content: flex-end;
+		gap: 15px;
+	}
 }
 
 @media (min-width: 1500px) {
@@ -992,13 +1013,6 @@ button:focus-visible {
 		font-size: 20px;
 	}
 
-	.services__item {
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: flex-start;
-		text-align: left;
-	}
-
 	.services__item-header {
 		min-width: 30%;
 	}
@@ -1014,7 +1028,7 @@ button:focus-visible {
 	}
 }
 
-@media (min-width: 1870px) {
+@media (min-width: 1850px) {
 	.services {
 		padding-bottom: 160px;
 	}
